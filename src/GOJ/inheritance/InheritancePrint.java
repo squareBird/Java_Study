@@ -1,4 +1,4 @@
-package inheritance;
+package GOJ.inheritance;
 
 public class InheritancePrint {
     public static void main(String[] args) {
