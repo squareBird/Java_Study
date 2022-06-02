@@ -73,12 +73,17 @@ public class CalcService {
 
     // 계산 하기
     void calc(Scanner scan) {
+
         System.out.println("계산식 입력 (숫자, 연산부호 구분 띄어쓰기)");
 
         scan.nextLine();
         String input = scan.nextLine();
 
+        // 예외처리
+        // 1. 앞에 부호가-일 경우
         ArrayList<String> list = new ArrayList<>(Arrays.asList(input.split("(?<=[*/+-])|(?=[*/+-])")));
+
+        System.out.println(list);
 
         multiply(list);
         divide(list);
@@ -88,8 +93,6 @@ public class CalcService {
         System.out.println(list.get(0));
 
         calculator.save(input+"="+list.get(0));
-
-
 
     }
 
